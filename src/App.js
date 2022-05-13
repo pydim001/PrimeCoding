@@ -1,17 +1,24 @@
 import './App.css';
+import NavBar from './components/NavBar';
+import Video from './pages/Video';
+import Home from './pages/Home';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <body className="App-body">
-        <div className='nav-bar'>
-          <div className='title'>Prime Coding</div>
-          <div className='options' id='videos'>Videos</div>
-          <div className='options'>Courses</div>
-          <div className='options'>Register</div>
-        </div>
-      </body >
-    </div >
+    <Router>
+      <div className="App">
+        <NavBar />
+        <Switch>
+          <Route path="/videos">
+            <Video />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
