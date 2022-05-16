@@ -10,3 +10,7 @@ def getVideos(request):
 
 def home(request):
     return JsonResponse('Home', safe=False)
+
+
+def enrolledCourses(request):
+    return JsonResponse('You are not enrolled in any courses', safe=False)

@@ -3,6 +3,7 @@ import NavBar from './components/NavBar';
 import Video from './pages/Video';
 import Home from './pages/Home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Courses from './pages/Courses';
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
           </Route>
           <Route path="/">
             <Home />
+          </Route>
+          <Route path="/courses">
+            <Courses />
           </Route>
         </Switch>
       </div>

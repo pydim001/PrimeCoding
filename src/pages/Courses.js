@@ -1,27 +1,27 @@
+import './Courses.css';
 import { useState } from 'react';
-import './Video.css';
 
-function Video() {
+function Courses() {
 
-    const [videos, setVideos] = useState(null);
+    const [courses, setCourses] = useState(null);
 
     const fetching = async (path) => {
         try {
             const fetched = await fetch('http://127.0.0.1:8000/' + path)
             const response = await fetched.json();
-            setVideos(response);
+            setCourses(response);
         } catch (err) {
-            setVideos("An Error Occurred");
+            setCourses("An Error Occurred");
         }
     }
 
-    fetching('videos/');
+    fetching('courses/');
 
     return (
         <div>
-            <h1>{videos}</h1>
+            <h1>{courses}</h1>
         </div>
-    )
+    );
 }
 
-export default Video;
+export default Courses;

@@ -8,7 +8,7 @@ function NavBar() {
                 <div className='nav-bar'>
                     <div className='title'>Prime Coding</div>
                     <Link to='/videos'><div className='options' id='videos'>Videos</div></Link>
-                    <div className='options'>Courses</div>
+                    <Link to='/courses'><div className='options'>Courses</div></Link>
                     <div className='options'>Register</div>
                 </div>
             </body >
