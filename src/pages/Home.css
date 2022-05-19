@@ -1,0 +1,20 @@
+.Home {
+    text-align: center;
+    align-items: center;
+    font-family: 'Futura', sans-serif;
+}
+
+.about {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.langinfo {
+    text-align: left;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+.lang-right {}
+
+.lang-left {}
