@@ -14,3 +14,9 @@ def home(request):
 
 def enrolledCourses(request):
     return JsonResponse('You are not enrolled in any courses', safe=False)
+
+def python(request):
+    return JsonResponse('Python', safe=False)
+
+def java(request):
+    return JsonResponse('Java', safe=False)
