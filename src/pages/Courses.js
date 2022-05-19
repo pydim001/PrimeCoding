@@ -5,9 +5,9 @@ function Courses() {
 
     const [courses, setCourses] = useState(null);
 
-    const fetching = async (path) => {
+    const fetching = async () => {
         try {
-            const fetched = await fetch('http://127.0.0.1:8000/' + path)
+            const fetched = await fetch('http://127.0.0.1:8000/courses/');
             const response = await fetched.json();
             setCourses(response);
         } catch (err) {
@@ -15,7 +15,7 @@ function Courses() {
         }
     }
 
-    fetching('courses/');
+    fetching();
 
     return (
         <div>

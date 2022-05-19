@@ -7,9 +7,10 @@ function NavBar() {
             <body className="App-body">
                 <div className='nav-bar'>
                     <div className='title'>Prime Coding</div>
-                    <Link to='/videos'><div className='options' id='videos'>Videos</div></Link>
-                    <Link to='/courses'><div className='options'>Courses</div></Link>
-                    <div className='options'>Register</div>
+                    <div className='option' id='about'><Link to='/about' className='links'>About</Link></div>
+                    <div className='option'><Link to='/videos' className='links'>Videos</Link></div>
+                    <div className='option'><Link to='/courses' className='links'>Courses</Link></div>
+                    <div className='option'><Link to='/register' className='links'>Register</Link></div>
                 </div>
             </body >
         </div >

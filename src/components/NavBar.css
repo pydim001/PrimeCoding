@@ -23,11 +23,11 @@
     font-family: 'Futura', sans-serif;
 }
 
-.options {
+.option {
     font-size: 20px;
     color: #000;
     position: relative;
-    margin-right: 100px;
+    margin-right: 75px;
     display: inline-block;
     margin-top: 25px;
     font-family: 'Futura', sans-serif;
@@ -36,6 +36,11 @@
     padding-right: 4px;
 }
 
-#videos {
+.links {
+    text-decoration: none;
+    color: black;
+}
+
+#about {
     margin-left: 750px;
 }
