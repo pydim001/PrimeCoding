@@ -1,5 +1,8 @@
 import './Courses.css';
 import { useState } from 'react';
+import CourseWidget from '../components/CourseWidget';
+import python from "../assets/pythonlogo.png";
+import java from "../assets/java-logo-noword.png"
 
 function Courses() {
 
@@ -19,7 +22,8 @@ function Courses() {
 
     return (
         <div>
-            <h1>{courses}</h1>
+            <CourseWidget enrolled={true} title="Python Programming" logo={python} lessons={10} duration="1:00" to="/python" />
+            <CourseWidget enrolled={true} title="Java Programming" logo={java} lessons={10} duration="1:00" to="/javav" />
         </div>
     );
 }

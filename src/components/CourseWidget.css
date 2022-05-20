@@ -1,0 +1,18 @@
+#logo {
+    width: 200px;
+    height: 200px;
+}
+
+.widget {
+    border-radius: 30px;
+    text-align: center;
+    border: 0.5px solid gray;
+    width: 400px;
+    height: 400px;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.course-button {
+    margin-top: -30px;
+}
