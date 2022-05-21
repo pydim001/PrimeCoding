@@ -8,7 +8,7 @@ function CourseWidget(props) {
             <div className="widget">
                 <h3>{props.title}</h3>
                 <img src={props.logo} id="logo" />
-                <p>{props.lessons} Lessons | Duration: {props.duration}</p>
+                <p className="txt">{props.lessons} Lessons | Duration: {props.duration}</p>
                 <ViewCourse to={props.to} className="course-button" />
             </div>
         )

@@ -4,6 +4,7 @@
 }
 
 .widget {
+    display: inline-block;
     border-radius: 30px;
     text-align: center;
     border: 0.5px solid gray;
@@ -13,6 +14,6 @@
     margin-top: 50px;
 }
 
-.course-button {
-    margin-top: -30px;
+.txt {
+    margin-bottom: 50px;
 }
