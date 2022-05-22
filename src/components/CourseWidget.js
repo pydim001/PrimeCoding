@@ -1,4 +1,5 @@
 import "./CourseWidget.css";
+import EnrollCourse from "./EnrollCourse";
 import ViewCourse from "./ViewCourse";
 
 function CourseWidget(props) {
@@ -9,7 +10,10 @@ function CourseWidget(props) {
                 <h3>{props.title}</h3>
                 <img src={props.logo} id="logo" alt="logo" />
                 <p className="txt">{props.lessons} Lessons | Duration: {props.duration}</p>
-                <ViewCourse to={props.to} className="course-button" />
+                <div>
+                    <ViewCourse to={props.to} className="course-button" inline={props.inline} />
+                    <EnrollCourse />
+                </div>
             </div>
         )
     }

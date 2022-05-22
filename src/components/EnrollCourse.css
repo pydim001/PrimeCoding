@@ -5,6 +5,7 @@
     padding-right: 30px;
     padding-left: 30px;
     border-radius: 30px;
-    background-color: #34b1eb;
+    background-color: yellow;
     margin-top: 10px;
+    display: inline-block;
 }
