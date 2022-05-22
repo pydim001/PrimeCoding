@@ -31,16 +31,26 @@
     display: inline-block;
     margin-top: 25px;
     font-family: 'Futura', sans-serif;
-    border-bottom: 3px solid black;
-    padding: 3px;
-    padding-right: 4px;
+}
+
+.links:hover {
+    color: aliceblue;
+    border-bottom: 3px solid aliceblue;
 }
 
 .links {
     text-decoration: none;
     color: black;
+    border-bottom: 3px solid black;
+    padding: 3px;
+    padding-right: 4px;
 }
 
 #about {
     margin-left: 750px;
+}
+
+.title-link {
+    text-decoration: none;
+    color: black;
 }
