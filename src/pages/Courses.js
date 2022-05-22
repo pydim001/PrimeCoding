@@ -14,6 +14,7 @@ function Courses() {
             const fetched = await fetch('http://127.0.0.1:8000/courses/');
             const response = await fetched.json();
             setCourses(response);
+            console.log(courses);
         } catch (err) {
             setCourses("An Error Occurred");
         }
