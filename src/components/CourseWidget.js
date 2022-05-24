@@ -10,9 +10,9 @@ function CourseWidget(props) {
                 <h3>{props.title}</h3>
                 <img src={props.logo} id="logo" alt="logo" />
                 <p className="txt">{props.lessons} Lessons | Duration: {props.duration}</p>
-                <div>
+                <div className="buttons">
                     <ViewCourse to={props.to} className="course-button" inline={props.inline} />
-                    <EnrollCourse />
+                    <EnrollCourse style={{ marginTop: 0 }} />
                 </div>
             </div>
         )
