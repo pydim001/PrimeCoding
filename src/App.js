@@ -4,6 +4,7 @@ import Video from './pages/Video';
 import Home from './pages/Home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Courses from './pages/Courses';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             </Route>
           </Switch>
         </div>
+        <Footer />
       </div>
     </Router>
   );
