@@ -20,4 +20,17 @@
 
 .buttons {
     text-align: center;
+    margin-top: -25px;
+}
+
+.opts {
+    display: inline-block;
+}
+
+#vc {
+    margin-right: 10px;
+}
+
+#enr {
+    margin-left: 10px;
 }

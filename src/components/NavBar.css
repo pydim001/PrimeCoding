@@ -36,6 +36,7 @@
 .links:hover {
     color: aliceblue;
     border-bottom: 3px solid aliceblue;
+    transition: 0.3s ease-in-out;
 }
 
 .links {

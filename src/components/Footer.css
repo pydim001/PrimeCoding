@@ -1,8 +1,10 @@
 .footer {
+    position: relative;
     background-color: #34b1eb;
     height: 100px;
-    margin: auto;
+    width: 100%;
     padding-left: 50px;
+    bottom: 0;
 }
 
 .copy {

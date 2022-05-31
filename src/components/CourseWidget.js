@@ -11,8 +11,12 @@ function CourseWidget(props) {
                 <img src={props.logo} id="logo" alt="logo" />
                 <p className="txt">{props.lessons} Lessons | Duration: {props.duration}</p>
                 <div className="buttons">
-                    <ViewCourse to={props.to} className="course-button" inline={props.inline} />
-                    <EnrollCourse style={{ marginTop: 0 }} />
+                    <div className="opts" id="vc">
+                        <ViewCourse to={props.to} className="course-button" inline={props.inline} />
+                    </div>
+                    <div className="opts" id="enr">
+                        <EnrollCourse />
+                    </div>
                 </div>
             </div>
         )
