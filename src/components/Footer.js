@@ -6,7 +6,8 @@ function Footer() {
             <p className="copy">
                 Copyright
                 &copy;
-                2022
+                2022,
+                Prime Coding.
                 All rights reserved.
             </p>
         </div>

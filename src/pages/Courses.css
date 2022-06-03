@@ -35,6 +35,10 @@
     padding-right: 4px;
 }
 
+.courses {
+    text-align: center;
+}
+
 #videos {
     margin-left: 750px;
 }

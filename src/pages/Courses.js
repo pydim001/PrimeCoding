@@ -23,7 +23,7 @@ function Courses() {
     fetching();
 
     return (
-        <div>
+        <div className='courses'>
             <CourseWidget enrolled={true} title="Python Programming" logo={python} lessons={10} duration="1:00" to="/python" inline={true} />
             <CourseWidget enrolled={true} title="Java Programming" logo={java} lessons={10} duration="1:00" to="/java" inline={true} />
             <CourseWidget enrolled={true} title="Algorithms and Data Structures" logo={algs} lessons={10} duration="1:00" to="/algorithms-data-structures" inline={true} />
