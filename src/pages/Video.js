@@ -1,9 +1,11 @@
 import './Video.css';
 import { fetching } from '../fetch';
+import { useState } from 'react';
 
 function Video() {
 
-    const data = fetching("videos/");
+    const [data, setData] = useState();
+    fetching("videos/").then(res => { setData(res) });
 
     return (
         <div>

@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Courses from './pages/Courses';
 import Footer from './components/Footer';
+import Python from './pages/Python';
+import Java from './pages/Java';
 
 function App() {
   return (
@@ -22,6 +24,12 @@ function App() {
               </Route>
               <Route exact path="/courses">
                 <Courses />
+              </Route>
+              <Route exact path="/courses/python">
+                <Python />
+              </Route>
+              <Route exact path="/courses/java">
+                <Java />
               </Route>
             </Switch>
           </div>

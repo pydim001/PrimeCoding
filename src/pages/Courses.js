@@ -3,24 +3,13 @@ import { useState } from 'react';
 import CourseWidget from '../components/CourseWidget';
 import python from "../assets/pythonlogo.png";
 import java from "../assets/java-logo-noword.png"
-import algs from "../assets/algs-datastructs.png"
+import algs from "../assets/algs-datastructs.png";
+import { fetching } from '../fetch';
 
 function Courses() {
 
-    const [courses, setCourses] = useState(null);
-
-    const fetching = async () => {
-        try {
-            const fetched = await fetch('http://127.0.0.1:8000/courses/');
-            const response = await fetched.json();
-            setCourses(response);
-            console.log(courses);
-        } catch (err) {
-            setCourses("An Error Occurred");
-        }
-    }
-
-    fetching();
+    const [data, setData] = useState();
+    fetching("courses/").then(res => { setData(res) });
 
     return (
         <div className='courses'>
