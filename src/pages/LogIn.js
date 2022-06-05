@@ -4,7 +4,7 @@ import LogInButton from "../components/LogInButton";
 
 function LogIn(props) {
     return (
-        <div>
+        <div id="login-page">
             <div id="login-header">
                 <h1>Login</h1>
                 <div id="username">
