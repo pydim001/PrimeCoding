@@ -5,13 +5,13 @@ function Profile(props) {
     if (props.login) {
         return (
             <div>
-
+                <Link>Username</Link>
             </div>
         )
     } else {
         return (
             <div>
-                <Link to="/login">Log In</Link>
+                <Link to="/login" id="login">Log In</Link>
             </div>
         )
     }

@@ -7,6 +7,7 @@ import Courses from './pages/Courses';
 import Footer from './components/Footer';
 import Python from './pages/Python';
 import Java from './pages/Java';
+import LogIn from './pages/LogIn';
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
               </Route>
               <Route exact path="/courses/java">
                 <Java />
+              </Route>
+              <Route>
+                <LogIn />
               </Route>
             </Switch>
           </div>
