@@ -26,3 +26,7 @@ def python(request):
 
 def java(request):
     return JsonResponse('Java', safe=False)
+
+
+def login(request):
+    pass

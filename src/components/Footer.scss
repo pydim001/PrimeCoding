@@ -1,9 +1,11 @@
+$pad: 50px;
+
 .footer {
     position: absolute;
     background-color: #34b1eb;
     height: 100px;
-    width: 96.5%;
-    padding-left: 50px;
+    width: calc(100% - $pad);
+    padding-left: $pad;
     bottom: 0;
 }
 

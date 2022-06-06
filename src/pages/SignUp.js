@@ -2,7 +2,7 @@ import "./SignUp.css";
 
 function SignUp() {
     return (
-        <div>
+        <div id="signup-div">
 
         </div>
     )

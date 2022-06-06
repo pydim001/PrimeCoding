@@ -4,7 +4,7 @@ function Field(props) {
     return (
         <div className="field-css">
             <h3 className="labels" style={props.nameStyle}>{props.name}:</h3>
-            <input type="text" className="inputs" style={{ ...props.inputStyle, width: props.width }} />
+            <input type={props.type} className="inputs" style={{ ...props.inputStyle, width: props.width }} />
         </div>
     )
 }
