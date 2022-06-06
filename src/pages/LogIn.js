@@ -2,6 +2,7 @@ import "./LogIn.css";
 import { Link } from "react-router-dom";
 import LogInButton from "../components/LogInButton";
 import RememberMe from "../components/RememberMe";
+import Field from "../components/Field";
 
 function LogIn(props) {
     return (
@@ -9,12 +10,10 @@ function LogIn(props) {
             <div id="login-header">
                 <h1>Log In</h1>
                 <div id="username">
-                    <h3 className="labels">Username:</h3>
-                    <input type="text" className="inputs" />
+                    <Field name="Username" />
                 </div>
                 <div id="password">
-                    <h3 className="labels">Password:</h3>
-                    <input type="text" className="inputs" id="second-input" />
+                    <Field name="Password" inputStyle={{ marginBottom: 50 }} />
                     <div className="r-me">
                         <RememberMe />
                     </div>
@@ -22,9 +21,9 @@ function LogIn(props) {
                 <div id="lib">
                     <LogInButton />
                 </div>
-                <div className="forgot"><p><Link to="/forgot-username">Forgot username?</Link></p></div>
-                <div className="forgot"><p><Link to="/forgot-password">Forgot password?</Link></p></div>
-                <div className="forgot"><p>Don't have an account? <Link to="/signup" id="signup">Signup</Link></p></div>
+                <div className="forgot"><p><Link to="/forgot-username" className="f-links">Forgot username?</Link></p></div>
+                <div className="forgot"><p><Link to="/forgot-password" className="f-links">Forgot password?</Link></p></div>
+                <div className="forgot"><p>Don't have an account? <Link to="/signup" id="signup" className="f-links">Signup</Link></p></div>
             </div>
         </div>
     )

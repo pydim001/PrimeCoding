@@ -1,11 +1,11 @@
 import './Java.css';
 import { useState } from 'react';
-import { fetching } from '../fetch';
+import { getFetch } from '../fetch';
 
 function Java() {
 
     const [data, setData] = useState();
-    fetching("courses/java/").then(res => { setData(res) });
+    getFetch("courses/java/").then(res => { setData(res) });
 
     return (
         <div>

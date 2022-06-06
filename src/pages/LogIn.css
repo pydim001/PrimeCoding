@@ -37,10 +37,6 @@
     margin-bottom: 40px;
 }
 
-#second-input {
-    margin-bottom: 50px;
-}
-
 .forgot {
     margin-bottom: -9px;
     font-size: 14px;
@@ -60,4 +56,8 @@
 .r-me {
     position: absolute;
     margin-top: -50px;
+}
+
+.f-links {
+    color: blue;
 }

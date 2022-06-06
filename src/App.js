@@ -8,6 +8,8 @@ import Footer from './components/Footer';
 import Python from './pages/Python';
 import Java from './pages/Java';
 import LogIn from './pages/LogIn';
+import ForgotUsername from './pages/ForgotUsername';
+import ForgotPassword from './pages/ForgotPassword';
 
 function App() {
   return (
@@ -32,8 +34,14 @@ function App() {
               <Route exact path="/courses/java">
                 <Java />
               </Route>
-              <Route>
+              <Route exact path="/login">
                 <LogIn />
+              </Route>
+              <Route exact path="/forgot-username">
+                <ForgotUsername />
+              </Route>
+              <Route exact path="/forgot-password">
+                <ForgotPassword />
               </Route>
             </Switch>
           </div>

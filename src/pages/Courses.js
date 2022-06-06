@@ -4,12 +4,12 @@ import CourseWidget from '../components/CourseWidget';
 import python from "../assets/pythonlogo.png";
 import java from "../assets/java-logo-noword.png"
 import algs from "../assets/algs-datastructs.png";
-import { fetching } from '../fetch';
+import { getFetch } from '../fetch';
 
 function Courses() {
 
     const [data, setData] = useState();
-    fetching("courses/").then(res => { setData(res) });
+    getFetch("courses/").then(res => { setData(res) });
 
     return (
         <div className='courses'>
