@@ -1,5 +1,9 @@
 #login-header {
     text-align: center;
+    width: 800px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding-bottom: 20px;
 }
 
 #username {
@@ -34,7 +38,7 @@
 }
 
 #second-input {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .forgot {
@@ -42,4 +46,18 @@
     font-size: 14px;
 }
 
-#login-page {}
+#login-page {
+    font-family: 'Futura', sans-serif;
+    height: 714px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../assets/bgor.jpeg");
+    background-repeat: no-repeat;
+    background-size: 1600px 800px;
+}
+
+.r-me {
+    position: absolute;
+    margin-top: -50px;
+}

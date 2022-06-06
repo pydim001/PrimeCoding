@@ -1,0 +1,17 @@
+#check-box {
+    width: 20px;
+    height: 20px;
+}
+
+.re-me {
+    display: inline-block;
+}
+
+#remember-me {}
+
+#check-div {}
+
+#re-comp {
+    display: flex;
+    align-items: center;
+}
