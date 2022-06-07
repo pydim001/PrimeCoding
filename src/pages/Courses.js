@@ -8,6 +8,7 @@ import { getFetch } from '../fetch';
 
 function Courses() {
 
+    // eslint-disable-next-line
     const [data, setData] = useState();
     getFetch("courses/").then(res => { setData(res) });
 

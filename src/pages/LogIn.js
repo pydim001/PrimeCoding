@@ -1,6 +1,6 @@
 import "./LogIn.css";
 import { Link } from "react-router-dom";
-import LogInButton from "../components/LogInButton";
+import ReqButton from "../components/ReqButton";
 import RememberMe from "../components/RememberMe";
 import Field from "../components/Field";
 
@@ -24,7 +24,7 @@ function LogIn(props) {
                     </div>
                 </div>
                 <div id="lib">
-                    <LogInButton onclick={login} />
+                    <ReqButton onclick={login} title="Log In" />
                 </div>
                 <div className="forgot"><p><Link to="/forgot-username" className="f-links">Forgot username?</Link></p></div>
                 <div className="forgot"><p><Link to="/forgot-password" className="f-links">Forgot password?</Link></p></div>
