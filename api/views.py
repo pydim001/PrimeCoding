@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 
@@ -30,3 +31,9 @@ def java(request):
 
 def login(request):
     pass
+
+
+@csrf_exempt
+def signup(request):
+    #name = request.POST.get("email")
+    return JsonResponse(request.POST, safe=False)
