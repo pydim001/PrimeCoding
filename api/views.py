@@ -1,6 +1,7 @@
-from django.shortcuts import render
-from django.http import JsonResponse
+from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from api.models import Account, Course
+import json
 
 # Create your views here.
 
@@ -36,4 +37,10 @@ def login(request):
 @csrf_exempt
 def signup(request):
     #name = request.POST.get("email")
-    return JsonResponse(request.POST, safe=False)
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        acc = Account(type=False, username=data['username'],
+                      password=data['password'], firstname=data['firstName'], lastname=data['lastName'], email=data['email'])
+        return HttpResponse("New User Created")
+    else:
+        return JsonResponse("get fetch", safe=False)
