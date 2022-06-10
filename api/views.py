@@ -41,6 +41,8 @@ def signup(request):
         data = json.loads(request.body)
         acc = Account(type=False, username=data['username'],
                       password=data['password'], firstname=data['firstName'], lastname=data['lastName'], email=data['email'])
+        # acc.save()
         return HttpResponse("New User Created")
     else:
-        return JsonResponse("get fetch", safe=False)
+        q = Account.objects
+        return JsonResponse(q.get(id=1), safe=False)

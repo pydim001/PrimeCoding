@@ -10,7 +10,6 @@ class Account(models.Model):
     email = models.CharField(max_length=50)
     lastname = models.CharField(max_length=50)
     firstname = models.CharField(max_length=50)
-    courses = models.JSONField()
 
     def __str__(self):
         return self.email
@@ -25,7 +24,6 @@ class Account(models.Model):
 class Course(models.Model):
     account = models.ForeignKey(Account, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
-    videos = models.JSONField()
 
     def __str__(self):
         return self.title
