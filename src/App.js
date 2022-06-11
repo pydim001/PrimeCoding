@@ -11,6 +11,7 @@ import LogIn from './pages/LogIn';
 import ForgotUsername from './pages/ForgotUsername';
 import ForgotPassword from './pages/ForgotPassword';
 import SignUp from './pages/SignUp';
+import About from './pages/About';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
               <Route exact path="/forgot-username" component={ForgotUsername} />
               <Route exact path="/forgot-password" component={ForgotPassword} />
               <Route exact path="/signup" component={SignUp} />
+              <Route exact path="/about" component={About} />
             </Switch>
           </div>
         </div>
