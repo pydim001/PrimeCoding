@@ -4,3 +4,9 @@
     height: 250px;
     padding: 10px;
 }
+
+.about-div {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
