@@ -11,21 +11,31 @@ function SignUp() {
     const [firstName, setFirstName] = useState();
     const [lastName, setLastName] = useState();
     const [email, setEmail] = useState();
-    const [username, setUsername] = useState();
     const [password, setPassword] = useState();
     const [confirm, setConfirm] = useState();
 
+    const validEmail = (email) => {
+        if (!email.includes("@")) {
+            return false;
+        }
+        const spl = email.split("@")
+        if (spl[spl.length - 1].includes(".")) {
+            return true;
+        } else return false;
+    }
+
     const signup = () => {
         if (confirm === password) {
-            const request = {
-                "firstName": firstName,
-                "lastName": lastName,
-                "email": email,
-                "username": username,
-                "password": password
+            if (validEmail(email)) {
+                const request = {
+                    "firstName": firstName,
+                    "lastName": lastName,
+                    "email": email,
+                    "password": password
+                }
+                console.log(request);
+                postFetch("signup/", request).then(res => { setData(res) });
             }
-            console.log(request);
-            postFetch("signup/", request).then(res => { setData(res) });
         }
     }
 
@@ -43,9 +53,6 @@ function SignUp() {
                 </div>
                 <div className="forms">
                     <Field name="Email" width={500} type="text" onChange={setEmail} />
-                </div>
-                <div className="forms">
-                    <Field name="Username" width={500} type="text" onChange={setUsername} />
                 </div>
                 <div className="forms">
                     <Field name="Password" width={500} type="password" onChange={setPassword} />

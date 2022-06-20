@@ -39,8 +39,11 @@ def signup(request):
     #name = request.POST.get("email")
     if request.method == 'POST':
         data = json.loads(request.body)
-        acc = Account(type=False, username=data['username'],
-                      password=data['password'], firstname=data['firstName'], lastname=data['lastName'], email=data['email'])
+        for account in Account.objects.all():
+            if data["email"] == account.email:
+                return HttpResponse("An account already exists with this email")
+        acc = Account(type=False, password=data['password'],
+                      firstname=data['firstName'], lastname=data['lastName'], email=data['email'])
         acc.save()
         return HttpResponse("New User Created")
     else:

@@ -5,7 +5,6 @@ from django.db import models
 
 class Account(models.Model):
     type = models.BooleanField()
-    username = models.CharField(max_length=50)
     password = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
     lastname = models.CharField(max_length=50)
