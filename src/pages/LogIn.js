@@ -3,11 +3,23 @@ import { Link } from "react-router-dom";
 import ReqButton from "../components/ReqButton";
 import RememberMe from "../components/RememberMe";
 import Field from "../components/Field";
+import { useState } from "react";
+import { postFetch } from "../fetch";
+import ErrorMessage from "../components/ErrorMessage";
 
 function LogIn(props) {
 
-    const login = () => {
+    const [data, setData] = useState();
 
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
+
+    const login = () => {
+        const request = {
+            "email": email,
+            "password": password
+        }
+        postFetch("login/", request).then(res => { setData(res) })
     }
 
     return (
@@ -15,10 +27,10 @@ function LogIn(props) {
             <div id="login-header">
                 <h1>Log In</h1>
                 <div id="username">
-                    <Field name="Username" width={500} type="text" />
+                    <Field name="Email" width={500} type="text" onChange={setEmail} />
                 </div>
                 <div id="password">
-                    <Field name="Password" inputStyle={{ marginBottom: 50 }} width={500} type="password" />
+                    <Field name="Password" inputStyle={{ marginBottom: 50 }} width={500} type="password" onChange={setPassword} />
                     <div className="r-me">
                         <RememberMe />
                     </div>

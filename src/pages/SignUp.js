@@ -3,6 +3,7 @@ import Field from "../components/Field";
 import ReqButton from "../components/ReqButton";
 import { useState } from 'react';
 import { postFetch } from "../fetch";
+import ErrorMessage from "../components/ErrorMessage";
 
 function SignUp() {
 
@@ -33,7 +34,6 @@ function SignUp() {
                     "email": email,
                     "password": password
                 }
-                console.log(request);
                 postFetch("signup/", request).then(res => { setData(res) });
             }
         }

@@ -1,6 +1,7 @@
 import './Video.css';
 import { getFetch } from '../fetch';
 import { useState } from 'react';
+import ErrorMessage from '../components/ErrorMessage';
 
 function Video() {
 
@@ -9,7 +10,7 @@ function Video() {
 
     return (
         <div>
-            <h1>{data}</h1>
+
         </div>
     )
 }

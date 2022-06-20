@@ -53,6 +53,10 @@
     background-size: 1600px 800px;
 }
 
+#err-msg {
+    display: block;
+}
+
 .r-me {
     position: absolute;
     margin-top: -50px;

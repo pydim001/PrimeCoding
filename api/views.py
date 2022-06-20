@@ -30,13 +30,28 @@ def java(request):
     return JsonResponse('Java', safe=False)
 
 
+@csrf_exempt
 def login(request):
-    pass
+    if request.method == 'POST':
+        data = json.loads(request)
+        em = False
+        pw = False
+        for account in Account.objects.all():
+            if data["email"] == account.email:
+                em = True
+        for account in Account.objects.all():
+            if data["password"] == account.password:
+                pw = True
+        if em and pw:
+            return HttpResponse("Logged in")
+        else:
+            return HttpResponse("Either the email or password is incorrect")
+    else:
+        pass
 
 
 @csrf_exempt
 def signup(request):
-    #name = request.POST.get("email")
     if request.method == 'POST':
         data = json.loads(request.body)
         for account in Account.objects.all():
@@ -47,5 +62,5 @@ def signup(request):
         acc.save()
         return HttpResponse("New User Created")
     else:
-        q = Account.objects.get(id=2)
-        return JsonResponse(str(q), safe=False)
+        #q = Account.objects.get(id=2)
+        return JsonResponse('sign up', safe=False)

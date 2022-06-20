@@ -1,11 +1,15 @@
 import "./ErrorMessage.css";
 
 function ErrorMessage(props) {
-    return (
-        <div id="err-box">
+    const successes = ["Logged in", "New User Created"]
+    if (!successes.includes(props.message)) {
+        return (
+            <div id="err-box">
+                <p id="err-txt">{props.message}</p>
+            </div>
+        )
+    }
 
-        </div>
-    )
 }
 
 export default ErrorMessage;
