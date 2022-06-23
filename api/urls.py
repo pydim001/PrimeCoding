@@ -8,5 +8,6 @@ urlpatterns = [
     path('courses/', views.enrolledCourses),
     path('courses/python/', views.python),
     path('courses/java/', views.java),
-    path('signup/', views.signup)
+    path('signup/', views.signup),
+    path('login/', views.login)
 ]

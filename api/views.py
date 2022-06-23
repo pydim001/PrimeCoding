@@ -33,21 +33,17 @@ def java(request):
 @csrf_exempt
 def login(request):
     if request.method == 'POST':
-        data = json.loads(request)
-        em = False
-        pw = False
+        data = json.loads(request.body)
+        info = False
         for account in Account.objects.all():
-            if data["email"] == account.email:
-                em = True
-        for account in Account.objects.all():
-            if data["password"] == account.password:
-                pw = True
-        if em and pw:
+            if data["email"] == account.email and data["password"] == account.password:
+                info = True
+        if info:
             return HttpResponse("Logged in")
         else:
             return HttpResponse("Either the email or password is incorrect")
     else:
-        pass
+        return JsonResponse("login", safe=False)
 
 
 @csrf_exempt
