@@ -3,10 +3,11 @@ import Field from "../components/Field";
 import ReqButton from "../components/ReqButton";
 import { useState } from 'react';
 import { postFetch } from "../fetch";
-import ErrorMessage from "../components/ErrorMessage";
+//import ErrorMessage from "../components/ErrorMessage";
 
 function SignUp() {
 
+    // eslint-disable-next-line
     const [data, setData] = useState();
 
     const [firstName, setFirstName] = useState();

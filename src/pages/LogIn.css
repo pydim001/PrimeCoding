@@ -65,3 +65,8 @@
 .f-links {
     color: blue;
 }
+
+#log-err {
+    text-align: left;
+    margin-top: 20px;
+}

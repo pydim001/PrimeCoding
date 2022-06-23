@@ -6,9 +6,11 @@ import Field from "../components/Field";
 import { useState } from "react";
 import { postFetch } from "../fetch";
 import ErrorMessage from "../components/ErrorMessage";
+//import ErrorMessage from "../components/ErrorMessage";
 
 function LogIn(props) {
 
+    // eslint-disable-next-line
     const [data, setData] = useState();
 
     const [email, setEmail] = useState();
@@ -25,6 +27,9 @@ function LogIn(props) {
     return (
         <div id="login-page">
             <div id="login-header">
+                <div id="log-err">
+                    <ErrorMessage message={data} />
+                </div>
                 <h1>Log In</h1>
                 <div id="username">
                     <Field name="Email" width={500} type="text" onChange={setEmail} />

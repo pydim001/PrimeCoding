@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./Field.css";
 
 function Field(props) {
