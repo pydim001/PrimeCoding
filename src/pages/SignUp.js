@@ -19,7 +19,7 @@ function SignUp() {
         if (!email.includes("@")) {
             return false;
         }
-        const spl = email.split("@")
+        const spl = email.split("@");
         if (spl[spl.length - 1].includes(".")) {
             return true;
         } else return false;
