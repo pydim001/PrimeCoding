@@ -3,7 +3,7 @@ import Field from "../components/Field";
 import ReqButton from "../components/ReqButton";
 import { useState } from 'react';
 import { postFetch } from "../fetch";
-//import ErrorMessage from "../components/ErrorMessage";
+import ErrorMessage from "../components/ErrorMessage";
 
 function SignUp() {
 
@@ -43,6 +43,9 @@ function SignUp() {
     return (
         <div id="signup-div">
             <div id="login-header">
+                <div>
+                    <ErrorMessage message={data} />
+                </div>
                 <h1>Sign Up</h1>
                 <div className="forms" id="name-form">
                     <div className="half-name">

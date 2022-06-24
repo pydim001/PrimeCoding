@@ -1,7 +1,7 @@
 import "./ErrorMessage.css";
 
 function ErrorMessage(props) {
-    const successes = ["Logged in", "New User Created", ""]
+    const successes = ["Logged in", "New User Created", "", null]
     if (!successes.includes(props.message)) {
         return (
             <div id="err-box">

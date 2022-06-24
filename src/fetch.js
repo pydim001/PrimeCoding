@@ -25,6 +25,7 @@ export async function postFetch(path, req) {
         const response = await fetched.json();
         return response;
     } catch (err) {
+        console.log(err)
         return "An Error Occured";
     }
 }

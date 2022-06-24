@@ -39,9 +39,9 @@ def login(request):
             if data["email"] == account.email and data["password"] == account.password:
                 info = True
         if info:
-            return HttpResponse("Logged in")
+            return JsonResponse("Logged in", safe=False)
         else:
-            return HttpResponse("Either the email or password is incorrect")
+            return JsonResponse("Either the email or password is incorrect", safe=False)
     else:
         return JsonResponse("login", safe=False)
 
@@ -56,7 +56,7 @@ def signup(request):
         acc = Account(type=False, password=data['password'],
                       firstname=data['firstName'], lastname=data['lastName'], email=data['email'])
         acc.save()
-        return HttpResponse("New User Created")
+        return JsonResponse("New User Created", safe=False)
     else:
         #q = Account.objects.get(id=2)
         return JsonResponse('sign up', safe=False)
