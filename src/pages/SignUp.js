@@ -8,7 +8,7 @@ import ErrorMessage from "../components/ErrorMessage";
 function SignUp() {
 
     // eslint-disable-next-line
-    const [data, setData] = useState();
+    const [data, setData] = useState(null);
 
     const [firstName, setFirstName] = useState();
     const [lastName, setLastName] = useState();
@@ -36,14 +36,18 @@ function SignUp() {
                     "password": password
                 }
                 postFetch("signup/", request).then(res => { setData(res) });
+            } else {
+                setData("This email address is invalid")
             }
+        } else {
+            setData("Both the passwords you have typed don't match")
         }
     }
 
     return (
         <div id="signup-div">
             <div id="login-header">
-                <div>
+                <div id="sign-err">
                     <ErrorMessage message={data} />
                 </div>
                 <h1>Sign Up</h1>

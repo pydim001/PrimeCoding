@@ -11,7 +11,7 @@ import ErrorMessage from "../components/ErrorMessage";
 function LogIn(props) {
 
     // eslint-disable-next-line
-    const [data, setData] = useState();
+    const [data, setData] = useState(null);
 
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
