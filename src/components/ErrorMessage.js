@@ -1,13 +1,17 @@
 import "./ErrorMessage.css";
 
 function ErrorMessage(props) {
-    const successes = ["Logged in", "New User Created", "", null]
-    if (!successes.includes(props.message)) {
+    const successes = ["An account already exists with this email",
+        "Either the email or password is incorrect",
+        "This email address is invalid", "Both the passwords you have typed don't match"]
+    if (successes.includes(props.message)) {
         return (
             <div id="err-box">
                 <p id="err-txt">{props.message}</p>
             </div>
         )
+    } else {
+        props.setName(props.message)
     }
 
 }

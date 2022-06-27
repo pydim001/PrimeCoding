@@ -13,22 +13,26 @@ function LogIn(props) {
     // eslint-disable-next-line
     const [data, setData] = useState(null);
 
+    const [name, setName] = useState("");
+
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
 
-    const login = () => {
+    const login = async () => {
         const request = {
             "email": email,
             "password": password
         }
-        postFetch("login/", request).then(res => { setData(res) })
+        console.log(name)
+        await postFetch("login/", request).then(res => { setData(res) })
+        console.log(name)
     }
 
     return (
         <div id="login-page">
             <div id="login-header">
                 <div id="log-err">
-                    <ErrorMessage message={data} />
+                    <ErrorMessage message={data} setName={setName} />
                 </div>
                 <h1>Log In</h1>
                 <div id="username">

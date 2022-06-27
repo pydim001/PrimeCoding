@@ -12,13 +12,15 @@ import ForgotUsername from './pages/ForgotUsername';
 import ForgotPassword from './pages/ForgotPassword';
 import SignUp from './pages/SignUp';
 import About from './pages/About';
+import { useState } from 'react';
 
 function App() {
+  const [fullName, setFullName] = useState();
   return (
     <BrowserRouter>
       <div className="page-container">
         <div className='page'>
-          <NavBar />
+          <NavBar user={fullName} />
           <div>
             <Switch>
               <Route exact path="/videos" component={Video} />
@@ -26,7 +28,9 @@ function App() {
               <Route exact path="/courses" component={Courses} />
               <Route exact path="/courses/python" component={Python} />
               <Route exact path="/courses/java" component={Java} />
-              <Route exact path="/login" component={LogIn} />
+              <Route exact path="/login">
+                <LogIn setName={setFullName} />
+              </Route>
               <Route exact path="/forgot-username" component={ForgotUsername} />
               <Route exact path="/forgot-password" component={ForgotPassword} />
               <Route exact path="/signup" component={SignUp} />

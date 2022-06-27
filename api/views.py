@@ -35,11 +35,13 @@ def login(request):
     if request.method == 'POST':
         data = json.loads(request.body)
         info = False
+        full_name = ""
         for account in Account.objects.all():
             if data["email"] == account.email and data["password"] == account.password:
                 info = True
+                full_name = account.firstname + " " + account.lastname
         if info:
-            return JsonResponse("Logged in", safe=False)
+            return JsonResponse(full_name, safe=False)
         else:
             return JsonResponse("Either the email or password is incorrect", safe=False)
     else:
