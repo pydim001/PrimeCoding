@@ -16,16 +16,24 @@ import { useState } from 'react';
 
 function App() {
   const [fullName, setFullName] = useState();
+  const [enrCourse, setEnrCourse] = useState(0);
+
+  const addCourse = () => {
+    setEnrCourse(enrCourse + 1)
+  }
+
   return (
     <BrowserRouter>
       <div className="page-container">
         <div className='page'>
-          <NavBar user={fullName} />
+          <NavBar user={fullName} courses={enrCourse} />
           <div>
             <Switch>
               <Route exact path="/videos" component={Video} />
               <Route exact path="/" component={Home} />
-              <Route exact path="/courses" component={Courses} />
+              <Route exact path="/courses">
+                <Courses addCourse={addCourse} />
+              </Route>
               <Route exact path="/courses/python" component={Python} />
               <Route exact path="/courses/java" component={Java} />
               <Route exact path="/login">
