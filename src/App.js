@@ -22,6 +22,10 @@ function App() {
     setEnrCourse(enrCourse + 1)
   }
 
+  const removeCourse = () => {
+    setEnrCourse(enrCourse - 1)
+  }
+
   return (
     <BrowserRouter>
       <div className="page-container">

@@ -3,8 +3,8 @@ import "./Counter.css";
 function Counter(props) {
     if (props.courses > 0) {
         return (
-            <div>
-
+            <div id="counter">
+                <div id="count"><p>{props.courses}</p></div>
             </div>
         )
     }

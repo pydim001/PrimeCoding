@@ -2,6 +2,7 @@ import './NavBar.css';
 import cart from "../assets/cart.png";
 import { Link } from 'react-router-dom';
 import Profile from './Profile';
+import Counter from './Counter';
 
 function NavBar() {
     return (
@@ -15,7 +16,10 @@ function NavBar() {
                     <div className='option'><Link to='/register' className='links'>Register</Link></div>
                     <div id="left-nav">
                         <div id="profile"><Profile /></div>
-                        <div id="image"><img src={cart} id="cart" alt='cart' /></div>
+                        <div id="image">
+                            <img src={cart} id="cart" alt='cart' />
+                            <Counter courses={9} />
+                        </div>
                     </div>
                 </div>
             </body >
