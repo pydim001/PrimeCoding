@@ -17,6 +17,9 @@ function Home() {
                 </p>
                 <ViewCourse to="/python" />
             </div>
+            <div>
+
+            </div>
             <div className='lang-right'>
                 <h2 className='langinfo'>Learn Java</h2>
                 <p className='langinfo'>
