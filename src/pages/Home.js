@@ -1,5 +1,6 @@
 import './Home.css';
 import ViewCourse from '../components/ViewCourse';
+import python from "../assets/python-screen.png"
 
 function Home() {
     return (
@@ -9,16 +10,18 @@ function Home() {
                 Our courses and videos will allow our students to learn the concepts of computer science and enable them to create programs and
                 application that will help themselves and others to achieve their goals.
             </p>
-            <div className='lang-left'>
-                <h2 className='langinfo'>Learn Python</h2>
-                <p className='langinfo'>
-                    Python is a simple and easy to learn interpreted language that allows high user functionality.
-                    Mainly used in fields like Artificial Intelligence and Data Science, Python allows programmers to create dynamic apps and programs with its useful built in libraries.
-                </p>
-                <ViewCourse to="/python" />
-            </div>
-            <div>
-
+            <div className='hor-sec'>
+                <div className='lang-left'>
+                    <h2 className='langinfo'>Learn Python</h2>
+                    <p className='langinfo'>
+                        Python is a simple and easy to learn interpreted language that allows high user functionality.
+                        Mainly used in fields like Artificial Intelligence and Data Science, Python allows programmers to create dynamic apps and programs with its useful built in libraries.
+                    </p>
+                    <ViewCourse to="/python" />
+                </div>
+                <div className='img-right'>
+                    <img src={python} alt='python' id="python-screen" />
+                </div>
             </div>
             <div className='lang-right'>
                 <h2 className='langinfo'>Learn Java</h2>

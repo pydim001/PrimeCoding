@@ -27,4 +27,25 @@
     margin-left: 100px;
     margin-bottom: 100px;
     margin-top: 50px;
+    margin-right: 100px;
+    display: inline-block;
+}
+
+#python-screen {
+    height: 225px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.img-right {
+    display: inline-block;
+    margin-left: 25px;
+    position: relative;
+}
+
+.hor-sec {
+    vertical-align: top;
+    display: flex;
 }
