@@ -1,6 +1,7 @@
 import './Home.css';
 import ViewCourse from '../components/ViewCourse';
 import python from "../assets/python-screen.png"
+import java from "../assets/java-screen.jpeg"
 
 function Home() {
     return (
@@ -23,13 +24,18 @@ function Home() {
                     <img src={python} alt='python' id="python-screen" />
                 </div>
             </div>
-            <div className='lang-right'>
-                <h2 className='langinfo'>Learn Java</h2>
-                <p className='langinfo'>
-                    Java is an object-oriented programming language that allows programmers to create templates of real-world objects.
-                    With its slogan "Write Once, Run Anywhere", Java allows you to make cross platform apps and is used everywhere.
-                </p>
-                <ViewCourse to="/java" />
+            <div className='hor-sec'>
+                <div className='img-left'>
+                    <img src={java} alt='java' id="java-screen" />
+                </div>
+                <div className='lang-right'>
+                    <h2 className='langinfo'>Learn Java</h2>
+                    <p className='langinfo'>
+                        Java is an object-oriented programming language that allows programmers to create templates of real-world objects.
+                        With its slogan "Write Once, Run Anywhere", Java allows you to make cross platform apps and is used everywhere.
+                    </p>
+                    <ViewCourse to="/java" />
+                </div>
             </div>
         </div>
     )
