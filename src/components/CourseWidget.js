@@ -15,7 +15,7 @@ function CourseWidget(props) {
                         <ViewCourse to={props.to} className="course-button" inline={props.inline} />
                     </div>
                     <div className="opts" id="enr">
-                        <EnrollCourse />
+                        <EnrollCourse cId={props.cId} />
                     </div>
                 </div>
             </div>

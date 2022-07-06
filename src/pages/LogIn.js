@@ -13,6 +13,7 @@ function LogIn(props) {
     // eslint-disable-next-line
     const [data, setData] = useState(null);
 
+    //eslint-disable-next-line
     const [name, setName] = useState("");
 
     const [email, setEmail] = useState();
@@ -23,9 +24,9 @@ function LogIn(props) {
             "email": email,
             "password": password
         }
-        console.log(name)
+        //console.log(name)
         await postFetch("login/", request).then(res => { setData(res) })
-        console.log(name)
+        //console.log(name)
     }
 
     return (

@@ -5,7 +5,7 @@ function Profile(props) {
     if (props.login) {
         return (
             <div>
-                <Link>Username</Link>
+                <Link>{props.name}</Link>
             </div>
         )
     } else {
