@@ -1,7 +1,7 @@
 import './Home.css';
 import ViewCourse from '../components/ViewCourse';
 import python from "../assets/python-screen.png"
-import java from "../assets/java-screen.jpeg"
+import java from "../assets/java-screen.png"
 
 function Home() {
     return (

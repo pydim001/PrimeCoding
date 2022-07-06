@@ -22,6 +22,7 @@ function App() {
     setEnrCourse(enrCourse + 1)
   }
 
+  // eslint-disable-next-line 
   const removeCourse = () => {
     setEnrCourse(enrCourse - 1)
   }
