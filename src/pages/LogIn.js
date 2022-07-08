@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import ReqButton from "../components/ReqButton";
 import RememberMe from "../components/RememberMe";
 import Field from "../components/Field";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { postFetch } from "../fetch";
 import ErrorMessage from "../components/ErrorMessage";
+import { NameContext } from "../Contexts";
 //import ErrorMessage from "../components/ErrorMessage";
 
 function LogIn(props) {
@@ -14,7 +15,7 @@ function LogIn(props) {
     const [data, setData] = useState(null);
 
     //eslint-disable-next-line
-    const [name, setName] = useState("");
+    const { fullName, setFullName } = useContext(NameContext);
 
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
@@ -33,7 +34,7 @@ function LogIn(props) {
         <div id="login-page">
             <div id="login-header">
                 <div id="log-err">
-                    <ErrorMessage message={data} setName={setName} />
+                    <ErrorMessage message={data} setName={setFullName} />
                 </div>
                 <h1>Log In</h1>
                 <div id="username">

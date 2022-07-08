@@ -13,8 +13,10 @@ import ForgotPassword from './pages/ForgotPassword';
 import SignUp from './pages/SignUp';
 import About from './pages/About';
 import { useState } from 'react';
+import { NameContext } from './Contexts';
 
 function App() {
+  // eslint-disable-next-line 
   const [fullName, setFullName] = useState();
   const [enrCourse, setEnrCourse] = useState(0);
 
@@ -31,7 +33,9 @@ function App() {
     <BrowserRouter>
       <div className="page-container">
         <div className='page'>
-          <NavBar user={fullName} courses={enrCourse} />
+          <NameContext.Provider value={{ fullName, setFullName }}>
+            <NavBar courses={enrCourse} />
+          </NameContext.Provider>
           <div>
             <Switch>
               <Route exact path="/videos" component={Video} />
@@ -41,17 +45,19 @@ function App() {
               </Route>
               <Route exact path="/courses/python" component={Python} />
               <Route exact path="/courses/java" component={Java} />
-              <Route exact path="/login">
-                <LogIn setName={setFullName} />
-              </Route>
+              <NameContext.Provider value={{ fullName, setFullName }}>
+                <Route exact path="/login">
+                  <LogIn />
+                </Route>
+              </NameContext.Provider>
               <Route exact path="/forgot-username" component={ForgotUsername} />
               <Route exact path="/forgot-password" component={ForgotPassword} />
               <Route exact path="/signup" component={SignUp} />
               <Route exact path="/about" component={About} />
             </Switch>
           </div>
+          <Footer />
         </div>
-        <Footer />
       </div>
     </BrowserRouter>
   );
