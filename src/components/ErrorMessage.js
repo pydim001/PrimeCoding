@@ -1,3 +1,4 @@
+import { postFetch } from "../fetch";
 import "./ErrorMessage.css";
 
 function ErrorMessage(props) {
@@ -11,6 +12,8 @@ function ErrorMessage(props) {
             </div>
         )
     } else {
+        const request = { "Logged": true }
+        postFetch("/", request)
         props.setName(props.message)
     }
 

@@ -7,7 +7,13 @@ import json
 
 
 def appData(request):
-    return JsonResponse({"Logged": False}, safe=False)
+    logged = False
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        for key in data.keys():
+            logged = data[key] if key == 'Logged' else logged
+    else:
+        return JsonResponse({"Logged": logged}, safe=False)
 
 
 def getVideos(request):
