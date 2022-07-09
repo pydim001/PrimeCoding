@@ -1,17 +1,27 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { NameContext } from "../Contexts";
+import { getFetch } from "../fetch";
 import "./Profile.css";
 
-function Profile(props) {
+function Profile() {
 
     //eslint-disable-next-line
     const { fullName, setFullName } = useContext(NameContext);
 
-    if (props.login) {
+    const [data, setData] = useState({ "Logged": false });
+
+    const test = false;
+
+    useEffect(() => {
+        getFetch("").then(res => { setData(res) })
+    }, [fullName])
+
+    if (data["Logged"]) {
+
         return (
             <div>
-                <Link>{fullName}</Link>
+                <Link id="login">{fullName}</Link>
             </div>
         )
     } else {

@@ -13,7 +13,7 @@ function ErrorMessage(props) {
         )
     } else {
         const request = { "Logged": true }
-        postFetch("/", request)
+        postFetch("", request)
         props.setName(props.message)
     }
 
